@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    /* Hide the scrollbar here too — depending on the browser, the actual
+       scrolling context is the <html> element rather than <body>, so this
+       needs to be covered as well or the bar can still show up. */
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
+  }
   body {
     background-color: #050505; /* The Rich Void */
     color: #ededed;
