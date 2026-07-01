@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #050505; /* The Rich Void */
+    color: #ededed;
+    margin: 0px;
+    padding: 0;
+    overflow-x: hidden;
+    /* Hide the scrollbar for a cleaner cinematic look */
+    scrollbar-width: none;
+    cursor: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
