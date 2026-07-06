@@ -5,6 +5,7 @@ import Login from "../components/Login";
 import HeroSection from "../components/Hero";
 import TheConfusion from "../components/TheConfusion";
 import DoorChapter from "../components/Chapter2";
+import FourLetters from "../components/Chapter3";
 
 export default function Home() {
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -18,6 +19,7 @@ export default function Home() {
           <HeroSection />
           <TheConfusion />
           <DoorChapter />
+          <FourLetters />
         </>
       )}
     </main>
