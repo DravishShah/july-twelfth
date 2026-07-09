@@ -8,6 +8,7 @@
        scrolling context is the <html> element rather than <body>, so this
        needs to be covered as well or the bar can still show up. */
     scrollbar-width: none;
+    scroll-snap-type: y proximity;
   }
   html::-webkit-scrollbar {
     display: none;
