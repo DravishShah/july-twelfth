@@ -179,7 +179,7 @@ export default function HeroSection() {
         glowRef.current,
         { opacity: 0, scale: 0.88 },
         { opacity: 1, scale: 1, duration: 1.2 },
-        0.5,
+        0.5
       );
 
       // Phone frame
@@ -193,7 +193,7 @@ export default function HeroSection() {
           duration: 1.3,
           ease: "expo.out",
         },
-        0.7,
+        0.7
       );
 
       // Msg 1 — incoming
@@ -201,7 +201,7 @@ export default function HeroSection() {
         msg1Ref.current,
         { opacity: 0, scale: 0.75, x: -12 },
         { opacity: 1, scale: 1, x: 0, duration: 0.6, ease: "back.out(2.2)" },
-        1.8,
+        1.8
       );
 
       // Typing indicator
@@ -209,20 +209,20 @@ export default function HeroSection() {
         typingRef.current,
         { opacity: 0, scale: 0.75, x: -12 },
         { opacity: 1, scale: 1, x: 0, duration: 0.45, ease: "back.out(2)" },
-        2.55,
+        2.55
       );
 
       // Typing fades, outgoing appears
       tl.to(
         typingRef.current,
         { opacity: 0, scale: 0.85, duration: 0.28, ease: "power2.in" },
-        3.5,
+        3.5
       );
       tl.fromTo(
         msg2Ref.current,
         { opacity: 0, scale: 0.75, x: 12 },
         { opacity: 1, scale: 1, x: 0, duration: 0.6, ease: "back.out(2.2)" },
-        3.7,
+        3.7
       );
 
       // Typing2 — Patther replies
@@ -230,12 +230,12 @@ export default function HeroSection() {
         typing2Ref.current,
         { opacity: 0, scale: 0.75, x: -12 },
         { opacity: 1, scale: 1, x: 0, duration: 0.45, ease: "back.out(2)" },
-        4.5,
+        4.5
       );
       tl.to(
         typing2Ref.current,
         { opacity: 0, scale: 0.85, duration: 0.28, ease: "power2.in" },
-        5.5,
+        5.5
       );
 
       // Msg 3 — Patther's reply
@@ -243,7 +243,7 @@ export default function HeroSection() {
         msg3Ref.current,
         { opacity: 0, scale: 0.75, x: -12 },
         { opacity: 1, scale: 1, x: 0, duration: 0.6, ease: "back.out(2.2)" },
-        5.7,
+        5.7
       );
 
       // Caption
@@ -251,7 +251,7 @@ export default function HeroSection() {
         captionRef.current,
         { opacity: 0, y: 16, filter: "blur(4px)" },
         { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8 },
-        6.4,
+        6.4
       );
 
       // Scroll parallax
@@ -998,12 +998,12 @@ export default function HeroSection() {
             }}
           >
             The silence was absolute. No reason given. Most would have walked
-            away, but she stayed. He almost let the connection fade.
+            away, but YOU stayed. I almost let the connection fade.
             <br /> <span style={{ fontWeight: 800 }}>
               &quot;Almost&quot;
             </span>{" "}
             <br />
-            But one small reply in 2013 changed the trajectory of forever.
+            But one small reply in 2013 changed Our trajectory of forever.
           </p>
         </div>
       </div>

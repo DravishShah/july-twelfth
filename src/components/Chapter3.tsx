@@ -40,23 +40,77 @@ const CARDS = [
   {
     roman: "I",
     image: "/letters/stone.png",
-    letter:
-      "Replace this with your own note for the first card. Write as much or as little as you like.",
+    letter: `Patther.
+
+    Of all the names I could have called you, somehow this ridiculous little nickname was the one that stayed. It never made much sense to anyone else, and honestly, it probably didn't make much sense to us either. But somewhere between school corridors, endless conversations, growing up, and growing together... it quietly became yours.
+    
+    You still pretend to dislike it every now and then, but I think we've both accepted that it isn't going anywhere. Somewhere along the way, Patther stopped being just a nickname. It became everything that came with it... the comfort, the laughter, the arguments, the memories, and every version of us that existed before we even knew we'd end up here.
+    
+    You've been my calm when life felt chaotic, my reason when I overthought everything, my biggest comfort, my safest place, and somehow... the one person who has always made the world feel a little lighter.
+    
+    Funny how a silly nickname from school ended up becoming the most meaningful name I know.
+    
+    To everyone else, you're Pranali.
+    
+    But to me... you'll always be my Patther.`,
   },
   {
     roman: "II",
     image: "/letters/train.png",
-    letter: "Replace this with your own note for the second card.",
+    letter: `Some people remember Mumbai Locals for the rush, the noise, or the endless crowd.
+    I'll always remember them because they remind me of you.
+    
+    Every trip from Dahanu to Churchgate was never just a journey to the city. It became our little escape from the rest of the world. We shared earphones, watched movies on a tiny phone screen, talked about everything and nothing, and somehow those hours always disappeared faster than they should have.
+    
+    People spend thousands searching for the perfect date. We found ours somewhere between two stations in the Train.
+    
+    The funniest part, though, was never the journey to Mumbai. It was the journey back home. We had mastered an entire system by then. We planned our arrival, we planned our exit, and somehow made sure our parents never met at the station. Arriving was usually the easier part, but leaving required military-level planning. One of us would get picked up first while the other patiently waited before making that final call home. At the time, it all felt completely normal. Looking back now, it feels like we were directing our own little secret love story.
+
+    And maybe that's why trains will always mean more to us than they ever should. Because somewhere on those railway tracks, I didn't just fall in love with you... I asked you to spend your life with me (if you could guess what I mean).
+      
+    But my favourite part is knowing that the next time we step onto one together, we won't have to worry about who arrives first, who leaves later, or whether our parents might see us.
+    We'll simply get off at Dahanu... together.`,
   },
   {
     roman: "III",
     image: "/letters/scooter.png",
-    letter: "Replace this with your own note for the third card.",
+    letter: `Scooter Rides.
+    Some people have a favourite café. Some have a favourite place to escape.
+
+    We always had our scooter.
+
+    Whenever life felt a little too heavy, or one of us simply wanted to spend time together, we'd just ride. No destination, no plans... just the road ahead and the comfort of having each other.
+
+    Sometimes we'd talk about everything that was on our minds. Sometimes we'd say almost nothing at all. Somehow, by the time we turned back home, the problems always felt a little smaller.
+
+    I'll never forget the way you'd hold onto me, sometimes lean on me which almost feels like a warm hug, occasionally tickling my stomach, calling me "Aye Dravlluu," and somehow making me laugh even when I didn't feel like it.
+
+    Looking back now, I don't remember every road we took.
+    I just remember how every ride ended with us feeling happier than when it began.
+    And maybe that's why...
+
+    Whenever I ride a scooter alone, the road suddenly feels much longer.
+    `,
   },
   {
     roman: "IV",
     image: "/letters/home.png",
-    letter: "Replace this with your own note for the fourth card.",
+    letter: `Home.
+    
+    It was never just your house.
+
+    Somewhere along the way, it quietly became mine too.
+
+    Most afternoons were wonderfully ordinary. We'd lie on your bed, endlessly scrolling through our phones, watch movies while sharing a packet of chips, complain about work, cook something when we felt like it, or simply order food because neither of us wanted to move. There was never a plan, and somehow those became some of my favourite days.
+
+    Your parents never made me feel like a guest either. There was always a cup of coffee, cupcakes, vada pav, or simply the feeling that I belonged there.
+
+    Funny how a place you've never lived in can start feeling like home.
+    Because home was never the four walls around us.
+
+    It was the life we quietly built inside them.
+    
+    `,
   },
 ];
 
@@ -73,7 +127,7 @@ const GRAIN_SVG =
     `<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'>
       <filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter>
       <rect width='100%' height='100%' filter='url(#n)'/>
-    </svg>`,
+    </svg>`
   );
 
 export default function FourLetters() {
@@ -123,7 +177,7 @@ export default function FourLetters() {
   // Cursor-tilt on the front card, driven directly (no React re-render).
   const handleMouseMove = (
     e: React.MouseEvent<HTMLDivElement>,
-    el: HTMLDivElement | null,
+    el: HTMLDivElement | null
   ) => {
     if (!el) return;
     const rect = el.getBoundingClientRect();
@@ -152,7 +206,7 @@ export default function FourLetters() {
       gsap.fromTo(
         backdrop,
         { opacity: 0 },
-        { opacity: 1, duration: 0.4, ease: "power2.out" },
+        { opacity: 1, duration: 0.4, ease: "power2.out" }
       );
       gsap.fromTo(
         letter,
@@ -173,7 +227,7 @@ export default function FourLetters() {
           rotate: 0,
           duration: 0.85,
           ease: "power3.out",
-        },
+        }
       );
     } else {
       const origin = originRef.current;
@@ -373,8 +427,8 @@ export default function FourLetters() {
           position: "fixed",
           left: "50%",
           top: "50%",
-          width: "min(90vw, 460px)",
-          maxHeight: "80vh",
+          width: "80vw",
+          maxHeight: "85vh",
           overflowY: "auto",
           borderRadius: 20,
           background: "rgba(255,255,255,0.1)",
@@ -423,8 +477,7 @@ export default function FourLetters() {
           className="font-cormorant"
           style={{
             position: "relative",
-            fontSize: 24,
-            fontStyle: "italic",
+            fontSize: 20,
             lineHeight: 1.6,
             color: "rgba(235,238,245,0.92)",
             whiteSpace: "pre-wrap",
